@@ -26,8 +26,12 @@ package com.iluwatar.singleton;
 /**
  * <p>Enum based singleton implementation. Effective Java 2nd Edition (Joshua Bloch) p. 18</p>
  *
+ * <p>基于枚举的单例实现</p>
+ *
  * <p>This implementation is thread safe, however adding any other method and its thread safety
  * is developers responsibility.</p>
+ *
+ * <p>只保证当前 INSTANCE 实例的线程安全，其他的是其他开发者的责任</p>
  */
 public enum EnumIvoryTower {
 
