@@ -27,6 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Projectile strategy.
+ * 策略2：接口实现类
  */
 @Slf4j
 public class ProjectileStrategy implements DragonSlayingStrategy {

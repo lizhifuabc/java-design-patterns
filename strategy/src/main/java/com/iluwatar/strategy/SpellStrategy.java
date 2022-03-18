@@ -27,6 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Spell strategy.
+ * 策略1：接口实现类
  */
 @Slf4j
 public class SpellStrategy implements DragonSlayingStrategy {

@@ -25,14 +25,28 @@ package com.iluwatar.strategy;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 基于枚举策略模式的Java 8 lambda实现。
+ */
 @Slf4j
 public class LambdaStrategy {
-
+  /**
+   * 策略枚举
+   */
   public enum Strategy implements DragonSlayingStrategy {
+    /**
+     * 策略1
+     */
     MeleeStrategy(() -> LOGGER.info(
         "With your Excalibur you severe the dragon's head!")),
+    /**
+     * 策略2
+     */
     ProjectileStrategy(() -> LOGGER.info(
         "You shoot the dragon with the magical crossbow and it falls dead on the ground!")),
+    /**
+     * 策略3
+     */
     SpellStrategy(() -> LOGGER.info(
         "You cast the spell of disintegration and the dragon vaporizes in a pile of dust!"));
 

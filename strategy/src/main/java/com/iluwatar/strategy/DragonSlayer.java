@@ -25,19 +25,31 @@ package com.iluwatar.strategy;
 
 /**
  * DragonSlayer uses different strategies to slay the dragon.
+ * 使用不同的策略去屠龙
  */
 public class DragonSlayer {
 
   private DragonSlayingStrategy strategy;
 
+  /**
+   * 定义具体的屠龙策略
+   * @param strategy
+   */
   public DragonSlayer(DragonSlayingStrategy strategy) {
     this.strategy = strategy;
   }
 
+  /**
+   * 更改屠龙策略
+   * @param strategy
+   */
   public void changeStrategy(DragonSlayingStrategy strategy) {
     this.strategy = strategy;
   }
 
+  /**
+   * 去屠龙
+   */
   public void goToBattle() {
     strategy.execute();
   }

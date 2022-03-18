@@ -26,7 +26,7 @@ package com.iluwatar.singleton;
 /**
  * <p>Thread-safe Singleton class. The instance is lazily initialized and thus needs synchronization
  * mechanism.</p>
- *
+ * <p>线程安全，实例是延迟初始化的，因此需要同步</p>
  */
 public final class ThreadSafeLazyLoadedIvoryTower {
 
@@ -34,6 +34,7 @@ public final class ThreadSafeLazyLoadedIvoryTower {
 
   private ThreadSafeLazyLoadedIvoryTower() {
     // Protect against instantiation via reflection
+    // 防止客户端实例化的私有构造函数
     if (instance != null) {
       throw new IllegalStateException("Already initialized.");
     }
@@ -41,6 +42,8 @@ public final class ThreadSafeLazyLoadedIvoryTower {
 
   /**
    * The instance doesn't get created until the method is called for the first time.
+   *
+   * 在第一次调用该方法之前，不会创建实例。
    */
   public static synchronized ThreadSafeLazyLoadedIvoryTower getInstance() {
     if (instance == null) {
