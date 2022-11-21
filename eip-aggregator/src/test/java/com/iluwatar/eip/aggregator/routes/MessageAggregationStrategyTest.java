@@ -1,6 +1,8 @@
 /*
+ * This project is licensed under the MIT license. Module model-view-viewmodel is using ZK framework licensed under LGPL (see lgpl-3.0.txt).
+ *
  * The MIT License
- * Copyright © 2014-2021 Ilkka Seppälä
+ * Copyright © 2014-2022 Ilkka Seppälä
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,13 +22,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 package com.iluwatar.eip.aggregator.routes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.apache.camel.CamelContext;
-import org.apache.camel.impl.DefaultExchange;
+import org.apache.camel.impl.engine.SimpleCamelContext;
+import org.apache.camel.support.DefaultExchange;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -34,13 +36,15 @@ import org.junit.jupiter.api.Test;
  */
 class MessageAggregationStrategyTest {
 
+  private final CamelContext context = new SimpleCamelContext();
+  
   @Test
   void testAggregate() {
     var mas = new MessageAggregationStrategy();
-    var oldExchange = new DefaultExchange((CamelContext) null);
+    var oldExchange = new DefaultExchange(context);
     oldExchange.getIn().setBody("TEST1");
 
-    var newExchange = new DefaultExchange((CamelContext) null);
+    var newExchange = new DefaultExchange(context);
     newExchange.getIn().setBody("TEST2");
 
     var output = mas.aggregate(oldExchange, newExchange);
@@ -52,7 +56,7 @@ class MessageAggregationStrategyTest {
   void testAggregateOldNull() {
     var mas = new MessageAggregationStrategy();
 
-    var newExchange = new DefaultExchange((CamelContext) null);
+    var newExchange = new DefaultExchange(context);
     newExchange.getIn().setBody("TEST2");
 
     var output = mas.aggregate(null, newExchange);

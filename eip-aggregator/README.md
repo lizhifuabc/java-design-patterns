@@ -1,11 +1,8 @@
 ---
-layout: pattern
 title: EIP Aggregator
-folder: eip-aggregator
-permalink: /patterns/eip-aggregator/
-categories: Integration
+category: Integration
 language: en
-tags:
+tag:
  - Enterprise Integration Pattern
 ---
 

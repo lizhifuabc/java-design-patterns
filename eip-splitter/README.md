@@ -1,11 +1,8 @@
 ---
-layout: pattern
 title: EIP Splitter
-folder: eip-splitter
-permalink: /patterns/eip-splitter/
-categories: Integration
+category: Integration
 language: en
-tags:
+tag:
  - Enterprise Integration Pattern
 ---
 

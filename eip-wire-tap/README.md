@@ -1,11 +1,8 @@
 ---
-layout: pattern
 title: EIP Wire Tap
-folder: eip-wire-tap
-permalink: /patterns/eip-wire-tap/
-categories: Integration
+category: Integration
 language: en
-tags:
+tag:
  - Enterprise Integration Pattern
 ---
 

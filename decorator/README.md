@@ -1,11 +1,8 @@
 ---
-layout: pattern
 title: Decorator
-folder: decorator
-permalink: /patterns/decorator/
-categories: Structural
+category: Structural
 language: en
-tags:
+tag:
  - Gang of Four
  - Extensibility
 ---

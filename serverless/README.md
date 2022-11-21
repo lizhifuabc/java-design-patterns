@@ -1,11 +1,8 @@
 ---
-layout: pattern
 title: Serverless
-folder: serverless
-permalink: /patterns/serverless/
-categories: Architectural
+category: Architectural
 language: en
-tags:
+tag:
  - Cloud distributed
 ---
 

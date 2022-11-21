@@ -1,11 +1,8 @@
 ---
-layout: pattern
 title: Naked Objects
-folder: naked-objects
-permalink: /patterns/naked-objects/
-categories: Architectural
+category: Architectural
 language: en
-tags:
+tag:
  - Decoupling
 ---
 

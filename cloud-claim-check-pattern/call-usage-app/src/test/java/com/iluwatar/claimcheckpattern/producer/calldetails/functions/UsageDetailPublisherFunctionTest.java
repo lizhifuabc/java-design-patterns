@@ -1,6 +1,8 @@
 /*
+ * This project is licensed under the MIT license. Module model-view-viewmodel is using ZK framework licensed under LGPL (see lgpl-3.0.txt).
+ *
  * The MIT License
- * Copyright © 2014-2021 Ilkka Seppälä
+ * Copyright © 2014-2022 Ilkka Seppälä
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 package com.iluwatar.claimcheckpattern.producer.calldetails.functions;
 
 import com.iluwatar.claimcheckpattern.HttpResponseMessageMock;
@@ -51,7 +52,7 @@ import static org.mockito.Mockito.*;
  * Unit test for Function class.
  */
 @ExtendWith(MockitoExtension.class)
-public class UsageDetailPublisherFunctionTest {
+class UsageDetailPublisherFunctionTest {
     @Mock
     MessageHandlerUtility<UsageDetail> mockMessageHandlerUtility;
     @Mock
@@ -64,7 +65,7 @@ public class UsageDetailPublisherFunctionTest {
      * Unit test for HttpTriggerJava method.
      */
     @Test
-    public void shouldTriggerHttpAzureFunctionJavaWithSubscriptionValidationEventType() throws Exception {
+    void shouldTriggerHttpAzureFunctionJavaWithSubscriptionValidationEventType() throws Exception {
 
         // Setup
         @SuppressWarnings("unchecked")
@@ -90,7 +91,7 @@ public class UsageDetailPublisherFunctionTest {
     }
 
     @Test
-    public void shouldTriggerHttpAzureFunctionJavaWithUsageDetailEventType() throws Exception {
+    void shouldTriggerHttpAzureFunctionJavaWithUsageDetailEventType() throws Exception {
 
         // Setup
         @SuppressWarnings("unchecked")

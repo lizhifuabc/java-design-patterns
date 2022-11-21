@@ -1,6 +1,8 @@
 /*
+ * This project is licensed under the MIT license. Module model-view-viewmodel is using ZK framework licensed under LGPL (see lgpl-3.0.txt).
+ *
  * The MIT License
- * Copyright © 2014-2021 Ilkka Seppälä
+ * Copyright © 2014-2022 Ilkka Seppälä
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 package com.iluwatar.claimcheckpattern.consumer.callcostprocessor.functions;
 
 import com.iluwatar.claimcheckpattern.HttpResponseMessageMock;
@@ -57,7 +58,7 @@ import static org.mockito.Mockito.*;
  * Unit test for Function class.
  */
 @ExtendWith(MockitoExtension.class)
-public class UsageCostProcessorFunctionTest {
+class UsageCostProcessorFunctionTest {
 
     @Mock
     MessageHandlerUtility<UsageDetail> mockMessageHandlerUtilityForUsageADetail;
@@ -73,7 +74,7 @@ public class UsageCostProcessorFunctionTest {
     UsageCostProcessorFunction usageCostProcessorFunction;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         var messageBodyUsageDetail = new MessageBody<UsageDetail>();
         var usageDetailsList = new ArrayList<UsageDetail>();
 
@@ -121,7 +122,7 @@ public class UsageCostProcessorFunctionTest {
      * Unit test for HttpTriggerJava method.
      */
     @Test
-    public void shouldTriggerHttpAzureFunctionJavaWithSubscriptionValidationEventType() throws Exception {
+    void shouldTriggerHttpAzureFunctionJavaWithSubscriptionValidationEventType() throws Exception {
 
         // Setup
         @SuppressWarnings("unchecked")
@@ -147,7 +148,7 @@ public class UsageCostProcessorFunctionTest {
     }
 
     @Test
-    public void shouldTriggerHttpAzureFunctionJavaWithUsageDetailEventType() throws Exception {
+    void shouldTriggerHttpAzureFunctionJavaWithUsageDetailEventType() throws Exception {
         // Setup
         @SuppressWarnings("unchecked")
         final HttpRequestMessage<Optional<String>> req = mock(HttpRequestMessage.class);

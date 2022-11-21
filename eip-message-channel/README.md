@@ -1,11 +1,8 @@
 ---
-layout: pattern
 title: EIP Message Channel
-folder: eip-message-channel
-permalink: /patterns/eip-message-channel/
-categories: Integration
+category: Integration
 language: en
-tags:
+tag:
  - Enterprise Integration Pattern
 ---
 

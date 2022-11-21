@@ -1,11 +1,8 @@
 ---
-layout: pattern
 title: Ambassador
-folder: ambassador
-permalink: /patterns/ambassador/
-categories: Structural
+category: Structural
 language: en
-tags:
+tag:
   - Decoupling
   - Cloud distributed
 ---
